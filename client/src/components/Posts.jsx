@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || "";
+
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [nextPage, setNextPage] = useState();
-  const [hasNextPage, setHasNextPage] = useState(false)
+  const [hasNextPage, setHasNextPage] = useState(false);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/posts');
+        const response = await fetch(`${API_BASE_URL}/posts`);
         const received = await response.json();
         setPosts(received.data);
         setNextPage(received.nextPage);
-        setHasNextPage(received.hasNextPage)
+        setHasNextPage(received.hasNextPage);
       } catch (error) {
         console.error('Error fetching posts:', error);
       }
@@ -41,6 +44,3 @@ const Posts = () => {
 }
 
 export default Posts;
-
-
-

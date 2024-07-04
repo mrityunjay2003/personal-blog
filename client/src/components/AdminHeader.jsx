@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import Button from "./Button";
 import Search from "./Search";
+const API_BASE_URL = import.meta.env.API_URL || "";
 
 const handleClick = () => {
-    fetch("http://localhost:5000/admin/logout")
+    fetch(`${API_BASE_URL}/logout`)
         .then(result => console.log(result.json()))
         .catch(error => console.log(error))
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "";
 const Post = () => {
     const { _id } = useParams();
     const [post, setPost] = useState([])
@@ -8,7 +8,7 @@ const Post = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/post/${_id}`);
+                const response = await fetch(`${API_BASE_URL}/post/${_id}`);
                 const received = await response.json();
                 setPost(received.data);
             } catch (error) {
