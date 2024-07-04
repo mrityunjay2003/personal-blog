@@ -4,7 +4,8 @@
   "description": "\"Changing the stack\"",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "build": "npm install --production && node -e \"console.log('Build completed successfully!')\""
   },
   "keywords": [
     "\"blog\""
