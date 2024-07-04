@@ -4,8 +4,8 @@
   "description": "\"Changing the stack\"",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "build": "echo Done!!"
+    "start": "node index.js",
+    "build": "echo Build complete"
   },
   "keywords": [
     "\"blog\""
