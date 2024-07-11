@@ -1,7 +1,7 @@
 const Intro = () => {
     return (
         <div className="flex flex-col items-center justify-center p-3">
-            <p className="font-semibold text-4xl">Hi,I am Mrityunjay</p>
+            <p className="font-semibold text-4xl">Hi,I am Aaryansh</p>
             <p className="font-thin text-3xl p-2">developer and cinephile</p>
         </div>
 
